@@ -8,3 +8,4 @@
         <button color="warn" (click)="logout()" md-raised-button>Logout</button>
     </div>
 </md-toolbar>
+<app-chat *ngIf="auth !== null"></app-chat>

@@ -30,4 +30,13 @@ export class AppComponent {
 			method: AuthMethods.Popup
 		});
 	}
+
+	public logout() {
+		this.af.auth.logout();
+	}
+
+	public isLogged() {
+		console.log('sa');
+		return this.auth !== null;
+	}
 }
