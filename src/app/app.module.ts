@@ -7,6 +7,7 @@ import {MaterialModule} from "@angular/material";
 import {AngularFireModule} from "angularfire2";
 import { ChatComponent } from './chat/chat.component';
 import { MessageComponent } from './chat/message/message.component';
+import {MessageService} from "./chat/message/message.service";
 export const config = {
 	apiKey: "AIzaSyA4RKIKsTSe__lRgCmyMvs18S8m94rVKDM",
 	authDomain: "walla-chat.firebaseapp.com",
@@ -28,7 +29,7 @@ export const config = {
 		MaterialModule.forRoot(),
 		AngularFireModule.initializeApp(config)
 	],
-	providers:    [],
+	providers:    [MessageService],
 	bootstrap:    [AppComponent]
 })
 export class AppModule {

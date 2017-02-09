@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MessageService} from "./message/message.service";
 
 @Component({
   selector: 'app-chat',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  constructor(private messageService: MessageService) {
+
+  }
+
+  public loadMessages() {
+    this.messageService.loadMessages().subscribe((messages) => {
+      console.log(messages);
+    });
+  }
 
   ngOnInit() {
   }
