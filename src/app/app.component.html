@@ -1,3 +1,10 @@
 <md-toolbar color="primary">
-    <span>WallaChat</span>
+    <h4>Whatsapp</h4>
+    <span class="app-toolbar-filler"></span>
+    <span class="example-spacer"></span>
+    <button *ngIf="auth === null" color="accent" (click)="login()" md-raised-button [hidden]="">Log In</button>
+    <div class="logout" *ngIf="auth !== null">
+        <img src="{{auth.avatar}}" alt="{{auth.name}}">
+        <button color="warn" (click)="logout()" md-raised-button>Logout</button>
+    </div>
 </md-toolbar>
