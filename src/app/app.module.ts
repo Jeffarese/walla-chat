@@ -2,11 +2,11 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-
 import {AppComponent} from './app.component';
 import {MaterialModule} from "@angular/material";
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import {AngularFireModule} from "angularfire2";
+import { ChatComponent } from './chat/chat.component';
+import { MessageComponent } from './chat/message/message.component';
 export const config = {
 	apiKey: "AIzaSyA4RKIKsTSe__lRgCmyMvs18S8m94rVKDM",
 	authDomain: "walla-chat.firebaseapp.com",
@@ -18,7 +18,8 @@ export const config = {
 @NgModule({
 	declarations: [
 		AppComponent,
-		ToolbarComponent
+		ChatComponent,
+		MessageComponent
 	],
 	imports:      [
 		BrowserModule,
