@@ -35,8 +35,4 @@ export class AppComponent {
 		this.af.auth.logout();
 	}
 
-	public isLogged() {
-		console.log('sa');
-		return this.auth !== null;
-	}
 }
